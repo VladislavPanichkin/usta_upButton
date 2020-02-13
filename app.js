@@ -1,9 +1,22 @@
 var upButton = document.createElement("a");
-upButton.innerText = "up";
+upButton.innerText = "";
 upButton.className = "customUpButton";
 document.body.appendChild(upButton);
+var customArrow = document.createElement("div");
+customArrow.innerText = "";
+customArrow.className = "customArrow";
+upButton.appendChild(customArrow);
 
 var styles = `
+.customArrow {
+    width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top: 7px solid;
+  border-right: 7px solid;
+  margin: 43% 35%;
+  transform: rotate(-45deg);  
+}
 .show {position: fixed;
     bottom: 80px;
     right: 40px;
@@ -15,7 +28,7 @@ var styles = `
     background: #f5f5f5;
     color: #444;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 50%;
     display: block !important;};
 .customUpButton {position: fixed;
     opacity: 0;
